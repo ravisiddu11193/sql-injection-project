@@ -1,0 +1,13 @@
+Prerequisites
+1. Kali Linux
+2.DVWA installed and configured
+3.PHP, Apache, MySQL running
+Installation Steps
+1. Install DVWA: `git clone https://github.com/digininja/DVWA.git`
+2. Set up database: `mysql -u root -p < setup-database.sql`
+3. Configure DVWA: Edit `config/config.inc.php`
+4. Set security level to "Low"
+Testing Steps
+1. Identify injection points
+2. Use SQLMap with proper session cookies
+3. Document findings.

